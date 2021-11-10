@@ -12,6 +12,11 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/babel" src="index.js"></script>
+    <script type="text/babel">
+      const fullName = (user) => user.firstName + " " + user.lastName;
+      const user = { firstName: "RAJKUMAR", lastName: "JEELA" };
+      const element = <h1 className="greeting">Hello, {fullName(user)}! </h1>;
+      ReactDOM.render(element, document.getElementById("root"));
+    </script>
   </body>
 </html>
